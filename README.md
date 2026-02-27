@@ -48,6 +48,25 @@ SmartResumeScreener/
 
 ---
 
+## UI 预览
+
+<table>
+  <tr>
+    <td align="center"><b>筛选面板</b></td>
+    <td align="center"><b>设置面板</b></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/screening.png" width="300" alt="筛选面板 - 提取简历、设定筛选条件、批量筛选与对比分析" /></td>
+    <td><img src="docs/screenshots/settings.png" width="300" alt="设置面板 - Azure OpenAI 配置、通用设置" /></td>
+  </tr>
+  <tr>
+    <td>从招聘平台一键提取简历，设定岗位要求、技能、薪资等筛选条件，支持批量 AI 评分和多人对比分析。</td>
+    <td>配置 Azure OpenAI Endpoint、API Key 和模型部署名称，支持连接测试、自动提取和并发数调节。</td>
+  </tr>
+</table>
+
+---
+
 ## 快速开始
 
 ### 前置要求
