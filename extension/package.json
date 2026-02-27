@@ -1,0 +1,30 @@
+{
+  "name": "smart-resume-screener-extension",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI 简历智能筛选 Chrome 插件 - 支持 Boss直聘 & 智联招聘",
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch --mode development",
+    "build": "tsc --noEmit && vite build && node scripts/post-build.js",
+    "build:fast": "vite build && node scripts/post-build.js",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0-beta.28",
+    "@types/chrome": "^0.0.277",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.14"
+  }
+}

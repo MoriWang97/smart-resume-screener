@@ -1,0 +1,65 @@
+{
+  "manifest_version": 3,
+  "name": "SmartResumeScreener - AI简历筛选助手",
+  "version": "1.0.0",
+  "description": "帮助HR在Boss直聘和智联招聘上使用AI智能筛选简历，提升招聘效率",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "https://www.zhipin.com/*",
+    "https://www.liepin.com/*",
+    "https://lpt.liepin.com/*",
+    "https://sou.zhaopin.com/*",
+    "https://rd.zhaopin.com/*",
+    "https://i.zhaopin.com/*",
+    "https://*.openai.azure.com/*",
+    "https://*.cognitiveservices.azure.com/*"
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "src/sidepanel/sidepanel.html"
+  },
+  "background": {
+    "service_worker": "src/background/index.ts",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.zhipin.com/*"],
+      "js": ["src/content/boss.ts"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://sou.zhaopin.com/*",
+        "https://rd.zhaopin.com/*",
+        "https://i.zhaopin.com/*"
+      ],
+      "js": ["src/content/zhaopin.ts"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://www.liepin.com/*",
+        "https://lpt.liepin.com/*"
+      ],
+      "js": ["src/content/liepin.ts"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

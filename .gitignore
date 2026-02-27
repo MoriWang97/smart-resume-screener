@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build output
+extension/dist/
+
+# IDE
+.vscode/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Zip package
+*.zip
+
+# Environment
+.env
+.env.local
